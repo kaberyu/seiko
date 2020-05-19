@@ -783,11 +783,13 @@ body {
 
 .bottom-img2 {
   width: 50%;
+  height: auto;
   padding-right: 5px;
 }
 
 .bottom-img3 {
   width: 50%;
+  height: auto;
 }
 
 .bottom-img4 {

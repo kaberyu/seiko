@@ -71,15 +71,15 @@ $(function () {
 
   // スムーズスクロール
   $('#js_scroll-down').click(function () {
-    var winW = $(window).width();
-    var winH = $(window).height();
-    if (winW < 640) {
+    var winW2 = $(window).width();
+    var winH2 = $(window).height();
+    if (winW2 < 640) {
       $('html, body').animate({
         'scrollTop': 812
       }, 1500);
     } else {
       $('html, body').animate({
-        'scrollTop': winH
+        'scrollTop': winH2
       }, 1500);
     }
   });
@@ -96,7 +96,7 @@ $(function () {
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
       var targetElement = $(this).offset().top;
-      if (scroll + windowHeight > targetElement + 400) {
+      if (scroll + windowHeight > targetElement + 200) {
         $(this).addClass('fadein');
       };
     });
