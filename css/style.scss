@@ -47,6 +47,16 @@ a{
   color: #fff;
 }
 
+.fadeout{
+  opacity: 0;
+  transform: translateY(30px);
+}
+.fadein{
+  opacity: 1;
+  transform: translateY(0px);
+  transition: 1s all;
+}
+
 
 
 // ボーダーアニメーション
@@ -162,17 +172,24 @@ body{
   }
 }
 
+.hover{
+  background-color: #000000;
+  transition: all 0.5s;
+  &:hover{
+    opacity: 0.6;
+  }
+}
 
 .hero{
   position: relative;
   width: 100%;
-  height: 100vh;
+  // height: 100vh;
   &-bg{
     position: absolute;
     z-index: 9;
     top: 0;
     width: 100%;
-    height: 100vh;
+    // height: 100vh;
     background: {
       image: url('../img/bg_top02.jpg');
       repeat: no-repeat;
@@ -191,24 +208,30 @@ body{
     z-index: 10;
     top: 30px;
     right: 30px;
+    &--border{
+      box-sizing: content-box;
+      border-right: 1px solid #fff;
+      height: 16px;
+      margin: 0 20px;
+    }
     &--gs{
       width: 80px;
     }
     &--ja{
       box-sizing: content-box;
       width: 18px;
-      padding-right: 20px;
-      border-right: 1px solid #fff;
     }
     &--tw{
       box-sizing: content-box;
       width: 18px;
-      padding-left: 20px;
-      padding-right: 10px;
+      margin-right: 10px;
     }
     &--fb{
       width: 18px;
     }
+  }
+  &-border{
+    display: none;
   }
   &-anime{
     position: absolute;
@@ -285,6 +308,10 @@ body{
     display: none;
     a{
       display: block;
+      transition: all .4s;
+      &:hover{
+        opacity: 0.5;
+      }
     }
     &--circle{
       width: 30px;
@@ -329,12 +356,9 @@ body{
     &-btn{
       top: 40px;
       right: 40px;
-      &--border{
-        box-sizing: content-box;
-        border-right: 1px solid #fff;
-        height: 18px;
-        margin: 0 20px;
-      }
+    }
+    &-border{
+      display: block;
     }
     &-anime{
       &--logo{
@@ -413,9 +437,9 @@ body{
   padding: 110px 30px 0;
   &-img{
     width: 100%;
-    padding-bottom: 45px;
+    margin-bottom: 45px;
     &4{
-      padding-bottom: 110px;
+      margin-bottom: 110px;
     }
     &_pc{
       display: none;
@@ -431,10 +455,10 @@ body{
       display: block;
       width: 80%;
       margin: 0 auto;
-      padding-bottom: 100px;
+      margin-bottom: 100px;
       }
       &4_pc{
-        padding-bottom: 220px;
+        margin-bottom: 220px;
       }
     }
   }
@@ -672,6 +696,30 @@ body{
       top: 40%;
       left: 50%;
       transform: translate(-50%, -50%);
+      // overflow: hidden;
+      // &:hover{
+      //   animation: hover .4s;
+      // }
+      // @keyframes hover{
+      //   0%{
+      //     transform: translateY(0);
+      //   }
+      //   50%{
+      //     opacity: 1;
+      //     transform: translateY(-20px);
+      //   }
+      //   51%{
+      //     opacity: 0;
+      //     transform: translateY(20px);
+      //   }
+      //   52%{
+      //     opacity: 1;
+      //     transform: translateY(20px);
+      //   }
+      //   100%{
+      //     transform: translateY(0);
+      //   }
+      // }
     }
   }
 }

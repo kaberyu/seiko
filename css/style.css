@@ -52,6 +52,20 @@ a {
   color: #fff;
 }
 
+.fadeout {
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+}
+
+.fadein {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-transition: 1s all;
+  transition: 1s all;
+}
+
 body {
   position: relative;
 }
@@ -170,10 +184,19 @@ body {
   }
 }
 
+.hover {
+  background-color: #000000;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.hover:hover {
+  opacity: 0.6;
+}
+
 .hero {
   position: relative;
   width: 100%;
-  height: 804px;
 }
 
 .hero-bg {
@@ -181,7 +204,6 @@ body {
   z-index: 9;
   top: 0;
   width: 100%;
-  height: 100vh;
   background-image: url("../img/bg_top02.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -205,6 +227,14 @@ body {
   right: 30px;
 }
 
+.hero-btn--border {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  border-right: 1px solid #fff;
+  height: 16px;
+  margin: 0 20px;
+}
+
 .hero-btn--gs {
   width: 80px;
 }
@@ -213,20 +243,21 @@ body {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   width: 18px;
-  padding-right: 20px;
-  border-right: 1px solid #fff;
 }
 
 .hero-btn--tw {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   width: 18px;
-  padding-left: 20px;
-  padding-right: 10px;
+  margin-right: 10px;
 }
 
 .hero-btn--fb {
   width: 18px;
+}
+
+.hero-border {
+  display: none;
 }
 
 .hero-anime {
@@ -328,6 +359,12 @@ body {
 
 .hero-bottom a {
   display: block;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.hero-bottom a:hover {
+  opacity: 0.5;
 }
 
 .hero-bottom--circle {
@@ -402,12 +439,8 @@ body {
     top: 40px;
     right: 40px;
   }
-  .hero-btn--border {
-    -webkit-box-sizing: content-box;
-            box-sizing: content-box;
-    border-right: 1px solid #fff;
-    height: 18px;
-    margin: 0 20px;
+  .hero-border {
+    display: block;
   }
   .hero-anime--logo {
     width: 290px;
@@ -484,11 +517,11 @@ body {
 
 .model-img {
   width: 100%;
-  padding-bottom: 45px;
+  margin-bottom: 45px;
 }
 
 .model-img4 {
-  padding-bottom: 110px;
+  margin-bottom: 110px;
 }
 
 .model-img_pc {
@@ -506,10 +539,10 @@ body {
     display: block;
     width: 80%;
     margin: 0 auto;
-    padding-bottom: 100px;
+    margin-bottom: 100px;
   }
   .model-img4_pc {
-    padding-bottom: 220px;
+    margin-bottom: 220px;
   }
 }
 
